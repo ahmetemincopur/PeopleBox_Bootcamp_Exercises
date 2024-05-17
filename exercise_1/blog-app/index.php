@@ -42,6 +42,13 @@
     }
 
     $baslik = array($filmler["1"]["baslik"],$filmler["2"]["baslik"],$filmler["0"]["baslik"]);
+    
+    // Başlığın bütün harflerini küçülterek aradaki boşlukları "-" işaretlerifle değiştiriyor
+    function url_olusturma($baslik){
+        $kucuk_harf_donusturulmus=strtolower($baslik);
+        $url_duzenlenmis = str_replace(" ", "-", $kucuk_harf_donusturulmus);
+        echo $url_duzenlenmis;
+    }
 
 ?>
 <!DOCTYPE html>
